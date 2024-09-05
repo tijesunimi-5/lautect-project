@@ -10,7 +10,7 @@ const Shop = () => {
     <div className="lg:w-full flex flex-col ">
       <div id="collection" className="lg:h-[100vh] lg:w-full lg:pt-10">
         <div className="w-full">
-          <div className="flex flex-col justify-between pt-20 m-auto text-center pl-6 lg:pt-10 lg:m-auto lg:ml-6">
+          <div className="flex flex-col lg:flex-row pt-10 m-auto ml-6">
             <ProductCard>
               <div className="h-[200px] overflow-hidden">
                 <img
@@ -41,7 +41,7 @@ const Shop = () => {
               </div>
 
               <Button>Buy</Button>
-            </ProductCard> 
+            </ProductCard>
 
             <ProductCard>
               <div className="h-[200px] overflow-hidden">
@@ -92,7 +92,7 @@ const Shop = () => {
             </ProductCard>
           </div>
 
-          <div className="flex flex-col pt-10 m-auto ml-6">
+          <div className="flex flex-col lg:flex-row pt-10 m-auto ml-6">
             <ProductCard>
               <div className="h-[200px] overflow-hidden">
                 <img
@@ -208,7 +208,7 @@ const Shop = () => {
 
           <div className="mt-6 flex ml-2 lg:ml-6">
             <label htmlFor="text" className="font-medium text-xl">
-              Message: {" "}
+              Message:{" "}
             </label>
             <textarea
               id="text"
@@ -222,7 +222,10 @@ const Shop = () => {
           </div>
         </form>
 
-        <img src="/dcloth.jpg" className="hidden lg:w-[450px] lg:h-[350px] lg:absolute lg:top-0 lg:right-6 lg:mt-20" />
+        <img
+          src="/dcloth.jpg"
+          className="hidden lg:flex lg:w-[450px] lg:h-[350px] lg:absolute lg:top-0 lg:right-6 lg:mt-20"
+        />
       </div>
 
       <footer className="flex justify-between bg-[#592B20] w-full h-8 text-white font-semibold">
