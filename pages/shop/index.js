@@ -176,9 +176,9 @@ const Shop = () => {
         </div>
       </div>
 
-      <div id="contact" className="lg:relative lg:w-full lg:h-[70vh] ">
-        <form className="lg:flex lg:flex-col lg:bg-[#F2EDE4] lg:mt-20 lg:w-[900px] lg:h-[350px] lg:ml-20 lg:rounded-xl">
-          <div className="lg:bg-white lg:w-[555px] lg:h-10 lg:ml-6 lg:mt-3 lg:flex">
+      <div id="contact" className="lg:relative lg:w-full lg:h-[70vh] h-[80vh] ">
+        <form className="flex flex-col bg-[#F2EDE4] mt-20 lg:w-[900px] lg:h-[350px] lg:ml-20 lg:rounded-xl">
+          <div className="bg-white h-10 ml-2 lg:w-[555px] lg:h-10 lg:ml-6 mt-3 flex">
             <label
               htmlFor="name"
               className="pt-1 pr-2 pl-1 font-medium text-xl"
@@ -188,11 +188,11 @@ const Shop = () => {
             <input
               id="name"
               type="text"
-              className="lg:bg-[#592B20] lg:w-[490px] text-white font-normal pl-2"
+              className="bg-[#592B20] w-[290px] lg:w-[490px] text-white font-normal pl-2"
             />
           </div>
 
-          <div className="lg:bg-white lg:w-[555px] lg:h-10 lg:ml-6 lg:mt-3 lg:flex">
+          <div className="bg-white h-10 ml-2 lg:w-[555px] lg:h-10 lg:ml-6 mt-3 flex">
             <label
               htmlFor="email"
               className="pt-1 pr-3 pl-1 font-medium text-xl"
@@ -202,33 +202,33 @@ const Shop = () => {
             <input
               id="name"
               type="email"
-              className="lg:bg-[#592B20] lg:w-[490px] text-white font-normal pl-2"
+              className="bg-[#592B20] w-[290px] lg:w-[490px] text-white font-normal pl-2"
             />
           </div>
 
-          <div className="lg:mt-6 lg:flex lg:ml-6">
+          <div className="mt-6 flex ml-2 lg:ml-6">
             <label htmlFor="text" className="font-medium text-xl">
-              Message:{" "}
+              Message: {" "}
             </label>
             <textarea
               id="text"
               rows={7}
-              className="lg:w-[500px] lg:bg-[#592B20] text-white pl-2"
+              className="lg:w-[500px] w-[275px] bg-[#592B20] text-white pl-2"
             />
           </div>
 
-          <div className="lg:text-center lg:mt-3">
+          <div className="text-center mt-3">
             <Button>Send</Button>
           </div>
         </form>
 
-        <img src="/dcloth.jpg" className="lg:w-[450px] lg:h-[350px] lg:absolute lg:top-0 lg:right-6 lg:mt-20" />
+        <img src="/dcloth.jpg" className="hidden lg:w-[450px] lg:h-[350px] lg:absolute lg:top-0 lg:right-6 lg:mt-20" />
       </div>
 
-      <footer className="lg:flex lg:justify-between lg:bg-[#592B20] lg:w-full lg:h-8 lg:text-white lg:font-semibold">
-        <div className="lg:pl-2">Lautech Fashion</div>
+      <footer className="flex justify-between bg-[#592B20] w-full h-8 text-white font-semibold">
+        <div className="pl-2">Lautech Fashion</div>
         <div>2023/2024 project</div>
-        <div className="lg:pr-2">Iyanuoluwa</div>
+        <div className="pr-2">Iyanuoluwa</div>
       </footer>
     </div>
   );
