@@ -74,7 +74,7 @@ export default function Home() {
             <i>Bringing your fashion styles, up to taste!</i>
           </motion.p>
         </div>
-        <div className="overlay absolute h-[100vh] lg:hidden"></div>
+        <div className="overlay absolute h-[99.9vh] lg:hidden"></div>
       </div>
     </main>
   );

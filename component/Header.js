@@ -1,45 +1,62 @@
 import Button from "@/layout/button";
 import Link from "next/link";
 import React from "react";
+import { FaBars } from "react-icons/fa";
 
 const Header = () => {
-  // const header = () => {
-  //   const nav = document.querySelector(".nav");
+  
 
-  //   nav.style.display = "none";
-  // };
-  // const navOn = () => {
-  //   const nav = document.querySelector(".nav");
+  const menu = () => {
+    const dashboard = document.querySelector(".dashboard");
+    const shop = document.querySelector(".shop");
 
-  //   nav.style.display = "block";
-  // };
+    dashboard.style.display = "block";
+    console.log(shop);
+    shop.style.display = "none";
+  };
+
+  const logo = () => {
+    const dashboard = document.querySelector(".dashboard");
+
+    dashboard.style.display = "none";
+  };
   return (
-    <header className="fixed w-full h-12 right-0 left-0 top-0 bg-[#F2EDE4] lg:h-12 z-20 border-b border-[#592B20]">
+    <header className="fixed w-full h-12 right-0 left-0 top-0 bg-[#F2EDE4] lg:h-12 z-40 border-b border-[#592B20]">
       <div className="flex justify-between mt-1">
-        <div
-          
-          className="header  cursor-pointer text-2xl font-bold ml-2 lg:ml-36 lg:text-3xl lg:font-bold lg:mt-1"
-        >
-          <Link href={"/"}>Lautech Fashion</Link>
+        <div className="header flex justify-center cursor-pointer text-2xl font-bold ml-2 lg:ml-36 lg:text-3xl lg:font-bold lg:mt-1">
+          <FaBars className="menu flex pt-1 mt-1 lg:hidden" onClick={menu} />
+          <Link href={"/"} onClick={logo}>
+            Lautech Fashion
+          </Link>
         </div>
 
         <div className="nav hidden lg:flex lg:pt-2">
           <ul className="flex flex-row text-xl font-medium">
+            
             <li className="lg:mr-10">
-              <a href="#collection">Collection</a>
+              <Link href="/shop#collection">Collection</Link>
             </li>
             <li className="lg:mr-10">
-              <a href="#contact">Contact Us</a>
+              <Link href="/shop#contact">Contact Us</Link>
+            </li>
+            <li>
+              <Link href={"/cart"}>Cart</Link>
             </li>
           </ul>
         </div>
 
-        <div className="lg:mr-16  lg:mt-1 mr-1 ">
+        <div className="lg:mr-16  lg:mt-1 mr-1 flex">
           <Button>
-            <Link href={"/shop"}  className="">
+            <Link href={"/shop"} className="">
               Shop Now
             </Link>
           </Button>
+
+          <div className="hidden lg:flex ml-6">
+            <Link href={"/register/signup"}>
+              <Button>Sign Up</Button>
+            </Link>
+          </div>
         </div>
       </div>
     </header>

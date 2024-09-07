@@ -4,10 +4,13 @@ import ProductCard from "@/layout/productCard";
 import Button from "@/layout/button";
 
 const Shop = () => {
-  
+  const handleClick = (event) => {
+    const buttonId = event.target.id;
+    console.log("CLicked Button ID", buttonId);
+  };
 
   return (
-    <div className="lg:w-full flex flex-col ">
+    <div className="shop lg:w-full flex flex-col ">
       <div id="collection" className="lg:h-[100vh] lg:w-full lg:pt-10">
         <div className="w-full">
           <div className="flex flex-col lg:flex-row pt-10 m-auto ml-6">
@@ -24,7 +27,9 @@ const Shop = () => {
                 <span className="pr-1">Price: #5000</span>
               </div>
 
-              <Button>Buy</Button>
+              <Button id="btn1" onclick={handleClick}>
+                Buy
+              </Button>
             </ProductCard>
 
             <ProductCard>
@@ -40,7 +45,9 @@ const Shop = () => {
                 <span className="pr-1">Price: #5000</span>
               </div>
 
-              <Button>Buy</Button>
+              <Button id="btn2" onclick={handleClick}>
+                Buy
+              </Button>
             </ProductCard>
 
             <ProductCard>
@@ -56,7 +63,9 @@ const Shop = () => {
                 <span className="pr-1">Price: #5000</span>
               </div>
 
-              <Button>Buy</Button>
+              <Button id="btn3" onclick={handleClick}>
+                Buy
+              </Button>
             </ProductCard>
 
             <ProductCard>
@@ -72,7 +81,9 @@ const Shop = () => {
                 <span className="pr-1">Price: #5000</span>
               </div>
 
-              <Button>Buy</Button>
+              <Button id="btn4" onclick={handleClick}>
+                Buy
+              </Button>
             </ProductCard>
 
             <ProductCard>
@@ -88,7 +99,9 @@ const Shop = () => {
                 <span className="pr-1">Price: #5000</span>
               </div>
 
-              <Button>Buy</Button>
+              <Button id="btn5" onclick={handleClick}>
+                Buy
+              </Button>
             </ProductCard>
           </div>
 
@@ -106,7 +119,9 @@ const Shop = () => {
                 <span className="pr-1">Price: #5000</span>
               </div>
 
-              <Button>Buy</Button>
+              <Button id="btn6" onclick={handleClick}>
+                Buy
+              </Button>
             </ProductCard>
 
             <ProductCard>
@@ -122,7 +137,9 @@ const Shop = () => {
                 <span className="pr-1">Price: #5000</span>
               </div>
 
-              <Button>Buy</Button>
+              <Button id="btn7" onclick={handleClick}>
+                Buy
+              </Button>
             </ProductCard>
 
             <ProductCard>
@@ -138,7 +155,9 @@ const Shop = () => {
                 <span className="pr-1">Price: #5000</span>
               </div>
 
-              <Button>Buy</Button>
+              <Button id="btn8" onclick={handleClick}>
+                Buy
+              </Button>
             </ProductCard>
 
             <ProductCard>
@@ -154,7 +173,9 @@ const Shop = () => {
                 <span className="pr-1">Price: #5000</span>
               </div>
 
-              <Button>Buy</Button>
+              <Button id="btn9" onclick={handleClick}>
+                Buy
+              </Button>
             </ProductCard>
 
             <ProductCard>
@@ -170,7 +191,9 @@ const Shop = () => {
                 <span className="pr-1">Price: #5000</span>
               </div>
 
-              <Button>Buy</Button>
+              <Button id="btn10" onclick={handleClick}>
+                Buy
+              </Button>
             </ProductCard>
           </div>
         </div>
