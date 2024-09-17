@@ -73,6 +73,10 @@ export default function Home() {
           >
             <i>Bringing your fashion styles, up to taste!</i>
           </motion.p>
+
+          <p className="lg:mt-72 mt-32 text-[#592B20] font-medium text-xl ">
+            Ajimoti Victoria Iyanu 194853
+          </p>
         </div>
         <div className="overlay absolute h-[99.9vh] lg:hidden"></div>
       </div>

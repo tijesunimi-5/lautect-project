@@ -1,39 +1,8 @@
-import Button from "@/layout/button";
-import FormCard from "@/layout/formCard";
+// import FormCard from "@/layout/formCard";
 import Link from "next/link";
 import React from "react";
-import { useState } from "react";
-import { useRouter } from "next/router";
-import { useUser } from "@/context/UserContext";
 
 const index = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
-  const router = useRouter()
-  const { setUser} = useUser();
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-
-    // Send login request to the API
-    const res = await fetch("/api/UserLogin", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
-
-    const data = await res.json();
-
-    if (res.ok) {
-      setMessage(data.message); // Login successful message
-      router.push('/')
-      setUser(data.user)
-    } else {
-      setMessage(data.message); // Error message
-    }
-  };
-
   
 
   return (
@@ -43,8 +12,8 @@ const index = () => {
       </h1>
 
       <div className="lg:mt-10 lg:w-full lg:text-center flex lg:justify-center">
-        <FormCard>
-          <form onSubmit={handleLogin}>
+        <div className="flex w-[350px] ml-[-10px] pl-5 mt-9 lg:mt-0 flex-col text-center overflow-hidden lg:w-[550px] lg:h-[350px] rounded-lg bg-[#f2ede4] lg:ml-10">
+          <form>
             <div className="flex mt-6 mb-6 lg:pl-6 lg:pt-10">
               <label htmlFor="name" className="text-xl font-medium pr-2">
                 Email:
@@ -53,7 +22,6 @@ const index = () => {
                 id="name"
                 type="email"
                 className="w-[250px] bg-[#592B20] lg:w-[450px] pl-2"
-                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
@@ -64,7 +32,6 @@ const index = () => {
                 id="password"
                 type="password"
                 className="w-[218px] bg-[#592B20] pl-2 lg:w-[420px]"
-                onChange={(e) => setPassword(e.target.value)}
                 required
               />
             </div>
@@ -83,11 +50,7 @@ const index = () => {
               </Link>
             </div>
           </form>
-        </FormCard>
-      </div>
-
-      <div>
-        {message && <p className="text-green-600">{message}</p>}
+        </div>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const Shop = () => {
   return (
     <div className="shop lg:w-full flex flex-col ">
       <div id="collection" className="lg:h-[100vh] lg:w-full lg:pt-10">
-        <div className="w-full">
+        <div className="w-full text-center">
           <div className="flex flex-col lg:flex-row pt-10 m-auto ml-6">
             <ProductCard>
               <div className="h-[200px] overflow-hidden">
@@ -251,10 +251,10 @@ const Shop = () => {
         />
       </div>
 
-      <footer className="flex justify-between bg-[#592B20] w-full h-8 text-white font-semibold">
-        <div className="pl-2">Lautech Fashion</div>
-        <div>2023/2024 project</div>
-        <div className="pr-2">Iyanuoluwa</div>
+      <footer className="flex justify-between bg-[#592B20] w-full h-12 text-white font-semibold">
+        <div className="pl-2">Lautech Fashion Store</div>
+        <div className="pl-8">2024 , Ajimoti Victoria Iyanu</div>
+        <div className="pr-2 pt-3">194853</div>
       </footer>
     </div>
   );
