@@ -2,8 +2,30 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ProductCard from "@/layout/productCard";
 import Button from "@/layout/button";
+import fs from "fs";
+import path from "path";
+import Product from "layout/Product";
+import Cart from "pages/cart";
 
-const Shop = () => {
+export async function getStaticProps() {
+  const filepath = path.join(process.cwd(), "data", "product.json");
+  const jsonData = fs.readFileSync(filepath, "utf8");
+  const products = JSON.parse(jsonData);
+
+  return {
+    props: {
+      products,
+    },
+  };
+}
+
+const Shop = ({ products }) => {
+  const [cart, setCart] = useState([]);
+  const handleProductButtonClick = (productDetails) => {
+    setCart((prevCart) => [...prevCart, productDetails]);
+    console.log("product details:", productDetails);
+  };
+
   const handleClick = (event) => {
     const buttonId = event.target.id;
     console.log("CLicked Button ID", buttonId);
@@ -14,188 +36,16 @@ const Shop = () => {
       <div id="collection" className="lg:h-[100vh] lg:w-full lg:pt-10">
         <div className="w-full text-center">
           <div className="flex flex-col lg:flex-row pt-10 m-auto ml-6">
-            <ProductCard>
-              <div className="h-[200px] overflow-hidden">
-                <img
-                  src="/dcloth.jpg"
-                  className="h-[200px] w-full transition-all hover:scale-[1.1]"
-                />
-              </div>
-
-              <div className="flex justify-between pt-6 mb-4 font-medium">
-                <span className="pl-1">Roundnecks</span>
-                <span className="pr-1">Price: #5000</span>
-              </div>
-
-              <Button id="btn1" onclick={handleClick}>
-                Buy
-              </Button>
-            </ProductCard>
-
-            <ProductCard>
-              <div className="h-[200px] overflow-hidden">
-                <img
-                  src="/dclothh.jpg"
-                  className="h-[200px] w-full transition-all hover:scale-[1.1]"
-                />
-              </div>
-
-              <div className="flex justify-between pt-6 mb-4 font-medium">
-                <span className="pl-1">Roundnecks </span>
-                <span className="pr-1">Price: #5000</span>
-              </div>
-
-              <Button id="btn2" onclick={handleClick}>
-                Buy
-              </Button>
-            </ProductCard>
-
-            <ProductCard>
-              <div className="h-[200px] overflow-hidden">
-                <img
-                  src="/dcloth.jpg"
-                  className="h-[200px] w-full transition-all hover:scale-[1.1]"
-                />
-              </div>
-
-              <div className="flex justify-between pt-6 mb-4 font-medium">
-                <span className="pl-1">Roundnecks </span>
-                <span className="pr-1">Price: #5000</span>
-              </div>
-
-              <Button id="btn3" onclick={handleClick}>
-                Buy
-              </Button>
-            </ProductCard>
-
-            <ProductCard>
-              <div className="h-[200px] overflow-hidden">
-                <img
-                  src="/dclothh.jpg"
-                  className="h-[200px] w-full transition-all hover:scale-[1.1]"
-                />
-              </div>
-
-              <div className="flex justify-between pt-6 mb-4 font-medium">
-                <span className="pl-1">Roundnecks </span>
-                <span className="pr-1">Price: #5000</span>
-              </div>
-
-              <Button id="btn4" onclick={handleClick}>
-                Buy
-              </Button>
-            </ProductCard>
-
-            <ProductCard>
-              <div className="h-[200px] overflow-hidden">
-                <img
-                  src="/dcloth.jpg"
-                  className="h-[200px] w-full transition-all hover:scale-[1.1]"
-                />
-              </div>
-
-              <div className="flex justify-between pt-6 mb-4 font-medium">
-                <span className="pl-1">Roundnecks </span>
-                <span className="pr-1">Price: #5000</span>
-              </div>
-
-              <Button id="btn5" onclick={handleClick}>
-                Buy
-              </Button>
-            </ProductCard>
+            {products.map((product) => (
+              <Product
+                key={product.id}
+                product={product}
+                onButtonClick={handleProductButtonClick}
+              />
+            ))}
           </div>
 
-          <div className="flex flex-col lg:flex-row pt-10 m-auto ml-6">
-            <ProductCard>
-              <div className="h-[200px] overflow-hidden">
-                <img
-                  src="/dcloth.jpg"
-                  className="h-[200px] w-full transition-all hover:scale-[1.1]"
-                />
-              </div>
-
-              <div className="flex justify-between pt-6 mb-4 font-medium">
-                <span className="pl-1">Roundnecks</span>
-                <span className="pr-1">Price: #5000</span>
-              </div>
-
-              <Button id="btn6" onclick={handleClick}>
-                Buy
-              </Button>
-            </ProductCard>
-
-            <ProductCard>
-              <div className="h-[200px] overflow-hidden">
-                <img
-                  src="/dclothh.jpg"
-                  className="h-[200px] w-full transition-all hover:scale-[1.1]"
-                />
-              </div>
-
-              <div className="flex justify-between pt-6 mb-4 font-medium">
-                <span className="pl-1">Roundnecks </span>
-                <span className="pr-1">Price: #5000</span>
-              </div>
-
-              <Button id="btn7" onclick={handleClick}>
-                Buy
-              </Button>
-            </ProductCard>
-
-            <ProductCard>
-              <div className="h-[200px] overflow-hidden">
-                <img
-                  src="/dcloth.jpg"
-                  className="h-[200px] w-full transition-all hover:scale-[1.1]"
-                />
-              </div>
-
-              <div className="flex justify-between pt-6 mb-4 font-medium">
-                <span className="pl-1">Roundnecks </span>
-                <span className="pr-1">Price: #5000</span>
-              </div>
-
-              <Button id="btn8" onclick={handleClick}>
-                Buy
-              </Button>
-            </ProductCard>
-
-            <ProductCard>
-              <div className="h-[200px] overflow-hidden">
-                <img
-                  src="/dclothh.jpg"
-                  className="h-[200px] w-full transition-all hover:scale-[1.1]"
-                />
-              </div>
-
-              <div className="flex justify-between pt-6 mb-4 font-medium">
-                <span className="pl-1">Roundnecks </span>
-                <span className="pr-1">Price: #5000</span>
-              </div>
-
-              <Button id="btn9" onclick={handleClick}>
-                Buy
-              </Button>
-            </ProductCard>
-
-            <ProductCard>
-              <div className="h-[200px] overflow-hidden">
-                <img
-                  src="/dcloth.jpg"
-                  className="h-[200px] w-full transition-all hover:scale-[1.1]"
-                />
-              </div>
-
-              <div className="flex justify-between pt-6 mb-4 font-medium">
-                <span className="pl-1">Roundnecks </span>
-                <span className="pr-1">Price: #5000</span>
-              </div>
-
-              <Button id="btn10" onclick={handleClick}>
-                Buy
-              </Button>
-            </ProductCard>
-          </div>
+          <Cart cartItems={cart} />
         </div>
       </div>
 

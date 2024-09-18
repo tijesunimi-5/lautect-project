@@ -1,6 +1,7 @@
-import Dashboard from '@/component/Dashboard';
-import Header from '@/component/Header'
+import Dashboard from 'component/Dashboard';
+import Header from 'component/Header';
 import React, { Fragment } from 'react'
+
 
 const Layout = (props) => {
   return (
