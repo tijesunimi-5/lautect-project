@@ -8,11 +8,11 @@ const Cart = ({ cartItems }) => {
       {cartItems.length === 0 ? (
         <p className="text-center mt-40 font-bold text-3xl">The cart is empty</p>
       ) : (
-        <ul className="mt-20 flex flex-row w-[1500px] flex-wrap">
+        <ul className="lg:mt-20 flex lg:flex-row lg:w-[1500px] flex-wrap">
           {cartItems.map((item, index) => (
             <li
               key={index}
-              className="flex w-[320px] ml-1  lg:mt-0 flex-col text-center overflow-hidden lg:w-[250px] lg:h-[300px] rounded-lg bg-[#f2ede4] lg:ml-10 mt-20"
+              className="flex w-[300px] text-center ml-10  mt-10 flex-col  overflow-hidden lg:w-[250px] lg:h-[300px] rounded-lg bg-[#f2ede4] lg:ml-10 lg:mt-20"
             >
               <img
                 src={item.image}
