@@ -6,9 +6,9 @@ const Cart = ({ cartItems }) => {
     <div className="cart">
       <h2>Shopping Cart</h2>
       {cartItems.length === 0 ? (
-        <p>The cart is empty</p>
+        <p className="text-center mt-40 font-bold text-3xl">The cart is empty</p>
       ) : (
-        <ul className="mt-20">
+        <ul className="mt-20 flex flex-row w-[1500px] flex-wrap">
           {cartItems.map((item, index) => (
             <li
               key={index}
