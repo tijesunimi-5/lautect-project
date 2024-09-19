@@ -1,25 +1,12 @@
-// components/Cart.js
-import React from "react";
+import React from 'react'
+import {Cart} from '../../component/Cart'
 
-const Cart = ({ cartItems }) => {
+const CartPage = () => {
   return (
-    <div className="cart">
-      <h2>Shopping Cart</h2>
-      {cartItems.length === 0 ? (
-        <p>The cart is empty</p>
-      ) : (
-        <ul>
-          {cartItems.map((item, index) => (
-            <li key={index}>
-              <img src={item.image} alt={item.name} style={{ width: "50px" }} />
-              <span>{item.name}</span>
-              <span>{item.price}</span>
-            </li>
-          ))}
-        </ul>
-      )}
+    <div>
+      <Cart />
     </div>
   );
-};
+}
 
-export default Cart;
+export default CartPage

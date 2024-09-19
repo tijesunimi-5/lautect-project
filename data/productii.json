@@ -1,31 +1,31 @@
 [
   {
-    "id": 1,
-    "image": "/dcloth.jpg",
+    "id": 6,
+    "image": "/shirtii.jpeg",
     "price": "N5000",
     "name": "Roundneck"
   },
   {
-    "id": 2,
-    "image": "/dclothh.jpg",
+    "id": 7,
+    "image": "/kjpulliv.jpg",
     "price": "N5000",
     "name": "Roundneck"
   },
   {
-    "id": 3,
-    "image": "/shirt2.jpg",
-    "price": "N5000",
-    "name": "Roundneck"
-  },
-  {
-    "id": 4,
-    "image": "/kjpullii.jpg",
-    "price": "N5000",
-    "name": "Roundneck"
-  },
-  {
-    "id": 5,
+    "id": 8,
     "image": "/shirtiii.jpg",
+    "price": "N5000",
+    "name": "Roundneck"
+  },
+  {
+    "id": 9,
+    "image": "/kjpull.jpg",
+    "price": "N5000",
+    "name": "Roundneck"
+  },
+  {
+    "id": 10,
+    "image": "/shirtiv.jpg",
     "price": "N5000",
     "name": "Roundneck"
   }
