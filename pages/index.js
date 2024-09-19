@@ -74,7 +74,7 @@ export default function Home() {
             <i>Bringing your fashion styles, up to taste!</i>
           </motion.p>
 
-          <p className="lg:mt-72 mt-32 text-[#592B20] font-medium text-xl ">
+          <p className="lg:mt-10 mt-32 text-[#592B20] font-medium text-xl ">
             Ajimoti Victoria Iyanu 194853
           </p>
         </div>

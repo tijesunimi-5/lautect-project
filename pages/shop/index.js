@@ -7,6 +7,7 @@ import path from "path";
 import Product from "layout/Product";
 import Cart from "../../component/Cart";
 import CartPage from "pages/cart";
+import { useCart } from "../../component/context/CartContext";
 
 export async function getStaticProps() {
   const filepath = path.join(process.cwd(), "data", "product.json");
@@ -26,11 +27,10 @@ export async function getStaticProps() {
 }
 
 const Shop = ({ products, productii }) => {
-  const [cart, setCart] = useState([]);
+  const { addToCart } = useCart();
 
   const handleProductButtonClick = (productDetails) => {
-    setCart((prevCart) => [...prevCart, productDetails]);
-    console.log("product details:", productDetails);
+    addToCart(productDetails);
   };
 
   return (
