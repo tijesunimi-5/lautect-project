@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import ProductCard from "@/layout/productCard";
-import Button from "@/layout/button";
 import fs from "fs";
 import path from "path";
 import Product from "layout/Product";
-import Cart from "../../component/Cart";
-import CartPage from "pages/cart";
 import { useCart } from "../../component/context/CartContext";
+import Button from "layout/button";
 
 export async function getStaticProps() {
   const filepath = path.join(process.cwd(), "data", "product.json");
