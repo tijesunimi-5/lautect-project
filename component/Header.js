@@ -1,4 +1,4 @@
-import Button from "@/layout/button";
+import Button from "../layout/button";
 import Link from "next/link";
 import React from "react";
 import { FaBars, FaMinusCircle } from "react-icons/fa";
