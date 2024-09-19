@@ -116,7 +116,7 @@ const Shop = ({ products, productii }) => {
         />
       </div>
 
-      <footer className="flex justify-between bg-[#592B20] w-full h-12 text-white font-semibold">
+      <footer className="flex justify-between bg-[#592B20] w-full h-16 text-white font-semibold">
         <div className="pl-2">Lautech Fashion Store</div>
         <div className="pl-8">2024 , Ajimoti Victoria Iyanu</div>
         <div className="pr-2 pt-3">194853</div>
