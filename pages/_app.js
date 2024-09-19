@@ -1,18 +1,13 @@
-
 import "@/styles/globals.css";
-import { CartProvider } from "context/CartContext";
+import { CartProvider } from "../component/context/CartContext";
 import Layout from "layout/layout";
 
 export default function App({ Component, pageProps }) {
   return (
-    <Layout>
-      <CartProvider>
+    <CartProvider>
+      <Layout>
         <Component {...pageProps} />
-      </CartProvider>
-    </Layout>
+      </Layout>
+    </CartProvider>
   );
-
-  
 }
-
-

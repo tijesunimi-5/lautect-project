@@ -38,7 +38,7 @@ const Shop = ({ products, productii }) => {
       <div id="collection" className="lg:h-[100vh] lg:w-full lg:pt-10">
         <div className="w-full text-center">
           <div className="flex flex-col lg:flex-row pt-10 m-auto ml-6 overflow-hidden">
-            <div className="flex flex-col lg:mt-10">
+            <div className="flex flex-col lg:flex-row lg:mt-10">
               {products.map((product) => (
                 <Product
                   key={product.id}
@@ -48,7 +48,7 @@ const Shop = ({ products, productii }) => {
               ))}
             </div>
 
-            <div className="flex flex-col lg:absolute lg:top-[500px]">
+            <div className="flex flex-col lg:absolute lg:top-[500px] lg:flex-row">
               {productii.map((producti) => (
                 <Product
                   key={producti.id}
@@ -59,9 +59,9 @@ const Shop = ({ products, productii }) => {
             </div>
           </div>
 
-          <div className="hidden">
+          {/* <div className="hidden">
             <Cart cartItems={cart} />
-          </div>
+          </div> */}
         </div>
       </div>
 
